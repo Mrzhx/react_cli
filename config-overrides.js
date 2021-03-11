@@ -2,9 +2,19 @@ const {
   override,
   fixBabelImports,
   addPostcssPlugins,
+  addWebpackAlias
 } = require("customize-cra");
 
+const path = require("path");
+
 module.exports = override(
+  addWebpackAlias({
+    "@utils": path.resolve(__dirname, "./src/utils"),
+    "@api": path.resolve(__dirname, "./src/api"),
+    "@assets": path.resolve(__dirname, "./src/assets"),
+    "@view": path.resolve(__dirname, "./src/view"),
+    "@components": path.resolve(__dirname, "./src/components"),
+ }),
   addPostcssPlugins([
     require("postcss-px-to-viewport")({
       viewportWidth: 375,
