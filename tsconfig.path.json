@@ -7,7 +7,7 @@
         "@view/*": ["view/*"],
         "@components/*": ["components/*"],
         "@api/*": ["api/*"],
-
+        "@route/*": ["route/*"],
      }
   }
 }

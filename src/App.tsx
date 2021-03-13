@@ -1,22 +1,23 @@
-import React, { useEffect } from 'react';
-import { Button } from 'antd-mobile';
-import { UserLogin } from '@api/test';
-// import { StepBackwardOutlined } from '@ant-design/icons';
-import './App.scss';
+import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
+import renderRoutes from "@route/route";
+import config from "@route/router_config";
 
-function App() {
-  useEffect(() => {
-    UserLogin({user_name: 'Tom'}).then(res => {
-      console.log(res)
-    })
-  }, [])
-  return (
-    <div className="App">
-      <Button loading>loading button</Button>
-      <div className='test-box'>我们爱</div>
-      <div className='test-box-2'></div>
-    </div>
-  );
+const routes = renderRoutes({
+  routes: config
+});
+
+class App extends Component {
+  componentDidMount() {
+    console.log(routes)
+  }
+  render() {
+    return (
+    <BrowserRouter>
+      { routes }
+    </BrowserRouter>
+    )
+  }
 }
 
 export default App;
