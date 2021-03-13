@@ -1,8 +1,10 @@
-import React from 'react'
+import { observer } from 'mobx-react'
+import { change_date } from '@store/todo'
 
-const TestApp = () => {
-  return <div>测试1111111组件</div>
-}
+const MyComponent = observer(() => (
+  <div>
+    <span onClick={change_date}>aaaa</span>
+  </div>
+))
 
-
-export default TestApp;
+export default MyComponent;

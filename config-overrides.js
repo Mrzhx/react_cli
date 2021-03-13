@@ -15,6 +15,7 @@ module.exports = override(
     "@view": path.resolve(__dirname, "./src/view"),
     "@components": path.resolve(__dirname, "./src/components"),
     "@route": path.resolve(__dirname, "./src/route"),
+    "@store": path.resolve(__dirname, "./src/store"),
  }),
   addPostcssPlugins([
     require("postcss-px-to-viewport")({
