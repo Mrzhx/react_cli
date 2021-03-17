@@ -1,10 +1,12 @@
-import { observer } from 'mobx-react'
-import { change_date } from '@store/todo'
+import { Store } from '@store/index'
+import { useEffect } from 'react'
 
-const MyComponent = observer(() => (
-  <div>
-    <span onClick={change_date}>aaaa</span>
-  </div>
-))
+const MyApp =  () => {
+  useEffect(()=> {
+    console.log(Store.TaskStore.Test)
+  }, [])
+  
+  return <div>hello</div>
+}
 
-export default MyComponent;
+export default MyApp
