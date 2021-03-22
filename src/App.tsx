@@ -12,11 +12,7 @@ class App extends Component {
     console.log(routes)
   }
   render() {
-    return (
-    <BrowserRouter>
-      { routes }
-    </BrowserRouter>
-    )
+    return <BrowserRouter>{ routes }</BrowserRouter>
   }
 }
 
