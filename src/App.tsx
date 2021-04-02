@@ -1,22 +1,32 @@
 import React, { Component } from "react";
-import { BrowserRouter } from "react-router-dom";
-import renderRoutes from "@route/route";
-import config from "@route/router_config";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from '@view/home/index';
+import Person from '@view/person/index';
+import Shop from '@view/store_shop/shop_view/index';
+import BottomBar from '@components/TabBar/TabBar'
+import history from '@route/history'
+
 import './App.scss';
 
-const routes = renderRoutes({
-  routes: config
-});
-
 class App extends Component {
+
   componentDidMount() {
-    console.log(routes)
+    console.log(history)
   }
+  
   render() {
     return (
-    <BrowserRouter>
-      { routes }
-    </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/person" element={<Person />} />
+          <Route path="shop" element={<Shop />}>
+            {/* <Route path="/" element={<PostLists />} />
+            <Route path=":slug" element={<Post />} /> */}
+          </Route>
+        </Routes>
+        <BottomBar history={history}></BottomBar>
+      </Router>
     )
   }
 }

@@ -8,17 +8,17 @@ export interface TabItem {
 export const TabArr: Array<TabItem> = [
   {
     title: '首页',
-    path: '',
+    path: '/',
     icon: 'HomeOutlined',
   },
   {
     title: '商城',
-    path: '',
+    path: '/shop',
     icon: 'ShopOutlined',
   },
   {
     title: '我的',
-    path: '',
+    path: '/person',
     icon: 'UsergroupAddOutlined',
   }
 ]
