@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
 import renderRoutes from "@route/route";
 import config from "@route/router_config";
+import './App.scss';
 
 const routes = renderRoutes({
   routes: config

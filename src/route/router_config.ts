@@ -1,17 +1,23 @@
-import { RouteProps } from "react-router-dom";
-import Test1 from "@view/home/test_1";
-import Test2 from "@view/home/test_2";
+import { RouteProps } from 'react-router-dom'
+// import Home from '@view/home/index'
+import IndexApp from '@view/indexApp/index'
+import Person from '@view/person/index'
+import Shop from '@view/store_shop/shop_view/index'
 
 
 const config: RouteProps[] = [
   {
-    path: "/",
-    component: Test1
+    path: '/',
+    component: IndexApp
   },
   {
-    path: "/user",
-    component: Test2
-  }
+    path: '/person',
+    component: Person
+  },
+  {
+    path: '/shop',
+    component: Shop
+  },
 ];
 
 
