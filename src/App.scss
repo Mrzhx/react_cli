@@ -1,8 +1,6 @@
 @import 'assets/css/a.scss';
 
-.test-box {
-  width: 375px;
-  height: 200px;
-  background-color: rgb(201, 54, 54);
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
-
