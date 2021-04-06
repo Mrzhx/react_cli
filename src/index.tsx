@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from "mobx-react";
+import { AppStore } from '@store/index';
 import './assets/css/reset.css'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider {...AppStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

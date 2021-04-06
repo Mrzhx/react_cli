@@ -1,5 +1,7 @@
-import TaskStore from './todo'
+import TaskStore from './todo';
+import UserStore from './user_auth';
 
-export const Store = {
-  TaskStore
+export const AppStore = {
+  TaskStore,
+  UserStore
 }
