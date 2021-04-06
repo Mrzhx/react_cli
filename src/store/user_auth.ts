@@ -21,10 +21,10 @@ class UserAuth {
               return false;
             }
             break;
-           case 'wx':
+          case "wx":
             // 获取地址栏参数
             const obj = Tools.param2Obj(window.location.href);
-            console.log(obj)
+            console.log(obj);
             break;
         }
       }

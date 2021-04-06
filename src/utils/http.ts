@@ -14,6 +14,8 @@ interface IObjectKeys {
   [key: string]: string | Blob;
 }
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 class HttpServe {
   constructor(init_config = {}) {
     this.config = {
@@ -23,7 +25,7 @@ class HttpServe {
   }
 
   config = {
-    BASE_URL: 'https://cs.58zltc.com',
+    BASE_URL: apiUrl,
     headers: {},
     timeOut: 3000,
     requestType: "JSON"

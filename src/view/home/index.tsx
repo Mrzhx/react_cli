@@ -1,5 +1,4 @@
-// import { Store } from '@store/index'
-// import { useEffect } from 'react'
+import React from "react";
 
 const MyApp =  () => {
   return <div>hexxxxxxxxxllo</div>
