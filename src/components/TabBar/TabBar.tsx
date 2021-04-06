@@ -1,22 +1,34 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from "react";
 import { TabBar } from "antd-mobile";
 import { TabArr } from "./init";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./tabbar.scss";
 
-
-
-
 function TabBarBottom() {
+
   const navigate = useNavigate();
+  const location = useLocation();
   const [selectedTab, setTab] = useState(0);
-  const [hidden] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [arrPath] = useState(['/person', '/', '/shop'])
+
+  useEffect(() => {
+    getTabBarStatus()
+  }, [])
+
+
+  const getTabBarStatus = () => {
+    if (arrPath.indexOf(location.pathname) < 0) {
+      setHidden(true)
+    }
+  }
 
   const changeRoute = (path: string, index: number) => {
     setTab(index)
     navigate(path)
   }
-
+  
   return (
     <div className="tabbar-con">
       <TabBar

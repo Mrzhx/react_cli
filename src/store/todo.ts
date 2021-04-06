@@ -6,4 +6,5 @@ class TaskStore {
   @action addTask() { /* ... */ }
 }
 
+
 export default new TaskStore()
